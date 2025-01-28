@@ -8,7 +8,7 @@ import StyleComponent from "./component/styleComponent";
 
 export default function Home() {
 	const [containerStyles, setContainerStyles] = useState({});
-	const [numberDivs, setNumberDivs] = useState(4);
+	const [numberDivs, setNumberDivs] = useState(3);
 	
 	const updateStyle = (field, value) => {
 		setContainerStyles((prev) => {
@@ -20,10 +20,10 @@ export default function Home() {
 
 	return (
 		<div className="flex justify-between w-full h-screen">
-			<section className="m-10">
+			<section className="m-10 w-full">
 				<PreviewComponent styles={containerStyles} n={numberDivs}/>
 			</section>
-			<section className="flex flex-col w-[300px] h-full border">
+			<section className="flex flex-col bg-[--preview-background] w-[--sidebar-width] h-full border border-[--card-background] shadow p-7">
 				{/* <section className="flex flex-col"> */}
 					<section className="flex-1">
 						<div>

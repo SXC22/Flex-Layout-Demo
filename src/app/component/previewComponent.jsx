@@ -22,8 +22,8 @@ const PreviewComponent = ({ styles, n=1 }) => {
 
 
     return (
-        <div className="border resize w-[400px] h-[500px] overflow-auto">
-            <div className="flex" style={styles}>
+        <div className="bg-[--preview-background] border border-[--card-background] w-[80%] h-[80%] min-w-[200px] min-h-[200px] max-h-full overflow-auto shadow rounded-lg resize">
+            <div className="flex transition-all" style={styles}>
                 { elementIndexes.map((element, index) => 
                     <PreviewDivComponent key={index} index={index} />
                 )}

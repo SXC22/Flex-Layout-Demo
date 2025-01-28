@@ -8,13 +8,13 @@ const PreviewDivComponent = ({ index }) => {
     return (
         <div 
             style={{ flex: flex }} 
-            className="w-[200px] h-[300px] py-10 px-5 border"
+            className="flex flex-col items-center justify-center w-[250px] h-[250px] py-10 px-5 bg-[--card-background] rounded-[50px] shadow transition-all"
         >
-            <div>Div{index}</div>
-            <div>Flex</div>
+            <h1 className="text-5xl pb-4 font-bold">Div<span>{index}</span></h1>
+            <div>flex:</div>
             <div>
                 <input 
-                    className="w-full"
+                    className="w-[60px] text-center py-1 px-2 rounded-xl outline-none"
                     value={flex} 
                     onInput={(e) => setFlex(e.target.value)}
                 />
