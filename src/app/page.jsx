@@ -49,6 +49,20 @@ export default function Home() {
 							callBack={ updateStyle }
 						></SettingComponent>
 
+						{/* FLEX DIRECTION PROPERTIES */}
+						<SettingComponent 
+							fieldValue={"flexDirection"} 
+							options={["row", "column", "row-reverse", "column-reverse"]}
+							callBack={ updateStyle }
+						></SettingComponent>
+
+						{/* FLEX-WRAP PROPERTY */}
+						<SettingComponent 
+							fieldValue={"flexWrap"} 
+							options={["nowrap", "wrap", "wrap-reverse"]}
+							callBack={ updateStyle }
+						></SettingComponent>
+
 						{/* JUSTIFY-CONTENT PROPERTY */}
 						<SettingComponent 
 							fieldValue={"justifyContent"} 
@@ -56,19 +70,20 @@ export default function Home() {
 							callBack={ updateStyle }
 						></SettingComponent>
 
-						{/* ALIGN-ITEMS PROPERTY */}
+						{/* ALIGN-CONTENT PROPERTY */}
 						<SettingComponent 
-							fieldValue={"alignItems"} 
-							options={["baseline", "center", "end"]}
+							fieldValue={"alignContent"} 
+							options={["stretch", "flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"]}
 							callBack={ updateStyle }
 						></SettingComponent>
 
-						{/* FLEX-WRAP PROPERTY */}
+						{/* ALIGN-ITEMS PROPERTY */}
 						<SettingComponent 
-							fieldValue={"flexWrap"} 
-							options={["nowrap", "wrap", "wrap-reverse", "column-reverse"]}
+							fieldValue={"alignItems"} 
+							options={["stretch", "flex-start", "flex-end", "center", "baseline"]}
 							callBack={ updateStyle }
 						></SettingComponent>
+						
 					</section>
 
 					<section>
