@@ -9,7 +9,7 @@
   --card-background: #6a9c6a;
   --shadow: 4px 4px 10px 10px var(--foreground);
 
-  --sidebar-width: 400px;
+  --sidebar-width: 480px;
 }
 
 /* @media (prefers-color-scheme: dark) {

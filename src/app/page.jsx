@@ -19,27 +19,51 @@ export default function Home() {
 	}
 
 	return (
-		<div className="flex justify-between w-full h-screen">
-			<section className="m-10 w-full">
+		<div className="flex justify-between w-screen h-screen">
+			<section className="m-10 w-full max-w-[calc(100%_-_var(--sidebar-width))]">
 				<PreviewComponent styles={containerStyles} n={numberDivs}/>
 			</section>
-			<section className="flex flex-col bg-[--preview-background] w-[--sidebar-width] h-full border border-[--card-background] shadow p-7">
+			<section className="flex flex-col bg-[--preview-background] w-[--sidebar-width] h-full border border-[--card-background] shadow py-10 px-9">
 				{/* <section className="flex flex-col"> */}
 					<section className="flex-1">
-						<div>
-							<span>number of divs: 
-								<input 
-									value={numberDivs} 
-									onInput={(e) => setNumberDivs(e.target.value)} 
-									type="number"
-								/>
-							</span>
-						</div>
+						
 						<SettingComponent 
-							fieldValue={"justifyContent"} 
-							options={["center", "space-between", "space-around", "space-evenly"]}
+							fieldValue={"number"} 
+							type="number"
+							value={numberDivs}
+							callBack={ (field, value) => setNumberDivs(value) }
+						></SettingComponent>
+						
+						{/* GAP PROPERTY */}
+						<SettingComponent 
+							fieldValue={"gap"} 
+							type="number"
+							value="0"
+							callBack={ (field, value) => updateStyle(field, value+'px') }
+						></SettingComponent>
+
+						{/* DISPLAY PROPERTY */}
+						<SettingComponent 
+							fieldValue={"display"} 
+							options={["block", "flex"]}
 							callBack={ updateStyle }
 						></SettingComponent>
+
+						{/* JUSTIFY-CONTENT PROPERTY */}
+						<SettingComponent 
+							fieldValue={"justifyContent"} 
+							options={["flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"]}
+							callBack={ updateStyle }
+						></SettingComponent>
+
+						{/* ALIGN-ITEMS PROPERTY */}
+						<SettingComponent 
+							fieldValue={"alignItems"} 
+							options={["baseline", "center", "end"]}
+							callBack={ updateStyle }
+						></SettingComponent>
+
+						{/* FLEX-WRAP PROPERTY */}
 						<SettingComponent 
 							fieldValue={"flexWrap"} 
 							options={["nowrap", "wrap", "wrap-reverse", "column-reverse"]}
