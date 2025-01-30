@@ -21,7 +21,7 @@ export default function Home() {
 	return (
 		<div className="flex justify-between w-screen h-screen">
 			<section className="m-10 w-full max-w-[calc(100%_-_var(--sidebar-width))]">
-				<PreviewComponent styles={containerStyles} n={numberDivs}/>
+				<PreviewComponent styles={containerStyles} n={numberDivs} />
 			</section>
 			<section className="flex flex-col bg-[--preview-background] w-[--sidebar-width] h-full border border-[--card-background] shadow py-10 px-9">
 				{/* <section className="flex flex-col"> */}
@@ -80,7 +80,7 @@ export default function Home() {
 						{/* ALIGN-ITEMS PROPERTY */}
 						<SettingComponent 
 							fieldValue={"alignItems"} 
-							options={["stretch", "flex-start", "flex-end", "center", "baseline"]}
+							options={["stretch", "flex-start", "flex-end", "center"]}
 							callBack={ updateStyle }
 						></SettingComponent>
 						
